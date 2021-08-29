@@ -5,7 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +22,12 @@
   },
   "homepage": "https://github.com/ZhangWei2222/webpack5-demo#readme",
   "devDependencies": {
+    "express": "^4.17.1",
     "html-webpack-plugin": "^5.3.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
+    "webpack-dev-middleware": "^5.0.0",
+    "webpack-dev-server": "^4.0.0",
     "webpack-manifest-plugin": "^4.0.2"
   },
   "dependencies": {
