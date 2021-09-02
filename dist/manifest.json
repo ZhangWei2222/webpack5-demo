@@ -1,5 +1,6 @@
 {
-  "index.js": "autoindex.bundle.js",
-  "print.js": "autoprint.bundle.js",
+  "index.js": "autoindex.fecccba4cffe46a10438.js",
+  "runtime.js": "autoruntime.c1cb51e01c5da2b69170.js",
+  "vendors.js": "autovendors.38e11468effb4a384528.js",
   "index.html": "autoindex.html"
 }
