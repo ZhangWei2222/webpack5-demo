@@ -19,10 +19,9 @@
   },
   "homepage": "https://github.com/ZhangWei2222/webpack5-demo#readme",
   "devDependencies": {
+    "lodash": "^4.17.21",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
   },
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {}
 }

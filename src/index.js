@@ -1,11 +1,22 @@
 import _ from 'lodash';
-function component() {
-  const element = document.createElement('div');
+import numRef from './ref.json';
 
-  // lodash 在当前 script 中使用 import 引入
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
+export function numToWord(num) {
+  return _.reduce(
+    numRef,
+    (accum, ref) => {
+      return ref.num === num ? ref.word : accum;
+    },
+    ''
+  );
 }
 
-document.body.appendChild(component());
+export function wordToNum(word) {
+  return _.reduce(
+    numRef,
+    (accum, ref) => {
+      return ref.word === word && word.toLowerCase() ? ref.num : accum;
+    },
+    -1
+  );
+}
