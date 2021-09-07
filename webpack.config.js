@@ -6,7 +6,6 @@ module.exports = {
   mode: "development",
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -17,10 +16,19 @@ module.exports = {
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     static: './dist',
+    hot: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '开发环境',
+      title: 'Hot Module Replacement',
     }),
     new WebpackManifestPlugin()
   ],
