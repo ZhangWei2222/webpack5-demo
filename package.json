@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/ZhangWei2222/webpack5-demo#readme",
   "devDependencies": {
+    "@types/lodash": "^4.14.172",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
   },
