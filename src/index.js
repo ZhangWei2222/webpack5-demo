@@ -1,11 +1,22 @@
-import _ from 'lodash';
 function component() {
   const element = document.createElement('div');
 
-  // lodash 在当前 script 中使用 import 引入
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = join(['Hello', 'webpack'], ' ');
+  console.log('file', file)
 
   return element;
 }
 
 document.body.appendChild(component());
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((response) => response.json())
+  .then((json) => {
+    console.log(
+      "We retrieved some data! AND we're confident it will work on a variety of browser distributions."
+    );
+    console.log(json);
+  })
+  .catch((error) =>
+    console.error('Something went wrong when fetching this data: ', error)
+  );
