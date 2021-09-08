@@ -1,5 +1,7 @@
 {
   "index.js": "autoindex.bundle.js",
   "print.js": "autoprint.bundle.js",
+  "workbox-fe5885ec.js": "autoworkbox-fe5885ec.js",
+  "service-worker.js": "autoservice-worker.js",
   "index.html": "autoindex.html"
 }

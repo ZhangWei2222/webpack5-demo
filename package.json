@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "http-server dist"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,11 @@
   "homepage": "https://github.com/ZhangWei2222/webpack5-demo#readme",
   "devDependencies": {
     "html-webpack-plugin": "^5.3.2",
+    "http-server": "^13.0.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-manifest-plugin": "^4.0.2"
+    "webpack-manifest-plugin": "^4.0.2",
+    "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
     "lodash": "^4.17.21"
