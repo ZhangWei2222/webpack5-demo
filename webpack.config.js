@@ -6,7 +6,6 @@ module.exports = {
   mode: "development",
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -24,4 +23,12 @@ module.exports = {
     }),
     new WebpackManifestPlugin()
   ],
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [path.resolve(__dirname, './src/loaders/style-loader.js'), path.resolve(__dirname, './src/loaders/css-loader.js'), path.resolve(__dirname, './src/loaders/less-loader.js')]
+      },
+    ]
+  }
 };

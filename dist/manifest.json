@@ -1,5 +1,4 @@
 {
-  "index.js": "autoindex.bundle.js",
-  "print.js": "autoprint.bundle.js",
-  "index.html": "autoindex.html"
+  "index.js": "/index.bundle.js",
+  "index.html": "/index.html"
 }
