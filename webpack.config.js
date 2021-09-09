@@ -23,20 +23,7 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.less$/,
-        use: ['./src/loaders/style-loader.js', './src/loaders/css-loader.js', './src/loaders/less-loader.js']
-      },
-      {
-        test: /\.(png|jpg)$/,
-        use: {
-          // loader: './src/loaders/file-loader.js'
-          loader: './src/loaders/url-loader.js',
-          options: {
-            limit: 200 * 1024 // 大于200k产生文件，小200k生成base64
-          }
-        },
-      }
+
     ]
   }
 };
