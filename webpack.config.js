@@ -33,7 +33,7 @@ module.exports = {
           // loader: './src/loaders/file-loader.js'
           loader: './src/loaders/url-loader.js',
           options: {
-            limit: '80000'
+            limit: 200 * 1024 // 大于200k产生文件，小200k生成base64
           }
         },
       }
