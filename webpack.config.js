@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
   mode: "development",
@@ -19,9 +18,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '开发环境',
+      title: 'Loader',
     }),
-    new WebpackManifestPlugin()
   ],
   module: {
     rules: [
@@ -29,6 +27,16 @@ module.exports = {
         test: /\.less$/,
         use: [path.resolve(__dirname, './src/loaders/style-loader.js'), path.resolve(__dirname, './src/loaders/css-loader.js'), path.resolve(__dirname, './src/loaders/less-loader.js')]
       },
+      {
+        test: /\.(png|jpg)$/,
+        use: {
+          // loader: './src/loaders/file-loader.js'
+          loader: './src/loaders/url-loader.js',
+          options: {
+            limit: '80000'
+          }
+        },
+      }
     ]
   }
 };
