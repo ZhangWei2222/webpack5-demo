@@ -11,9 +11,9 @@ function loader(source) {
     return str
 }
 
-// // pitch 执行的顺序是 style-loader css-loader less-loader
-// // 这里 remainingRequest 剩余请求表示的就是 css-loader!less-loader!./index.less
-// // 也就是剩下的还没操作的 css-loader less-loader
+// pitch 执行的顺序是 style-loader css-loader less-loader
+// 这里 remainingRequest 剩余请求表示的就是 css-loader!less-loader!./index.less
+// 也就是剩下的还没操作的 css-loader less-loader
 loader.pitch = (remainingRequest) => {
     console.log('===remainingRequest====', remainingRequest)
     // 使用 stringifyRequest 的作用是
