@@ -24,12 +24,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(png|jpg)$/,
         use: {
-          loader: './src/loaders/babel.js',
+          // loader: './src/loaders/file-loader.js'
+          loader: './src/loaders/url-loader.js',
           options: {
-            presets: ['@babel/preset-env'],
-          },
+            limit: '80000'
+          }
         },
 
       }
