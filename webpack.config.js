@@ -1,12 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
   mode: "development",
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -20,8 +18,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '开发环境',
+      title: 'Loader',
     }),
-    new WebpackManifestPlugin()
   ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: './src/loaders/babel.js',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+
+      }
+    ]
+  }
 };
