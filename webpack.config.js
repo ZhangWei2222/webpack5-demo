@@ -25,7 +25,7 @@ module.exports = {
     rules: [
       {
         test: /\.less$/,
-        use: [path.resolve(__dirname, './src/loaders/style-loader.js'), path.resolve(__dirname, './src/loaders/css-loader.js'), path.resolve(__dirname, './src/loaders/less-loader.js')]
+        use: ['./src/loaders/style-loader.js', './src/loaders/css-loader.js', './src/loaders/less-loader.js']
       },
       {
         test: /\.(png|jpg)$/,
